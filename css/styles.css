@@ -1,0 +1,275 @@
+:root {
+  /* Core Brand Colors */
+  --color-bg: #f4f6f9;          /* Soft, modern cool gray/blue background */
+  --color-surface: #ffffff;     /* Clean white for main card modules */
+  --color-navy: #1e293b;        /* Crisp, professional slate navy for headers */
+  --color-navy-dark: #0f172a;   /* Rich dark navy for primary headings */
+  
+  /* Accent Colors */
+  --color-gold: #b45309;        /* Warm amber gold with high contrast for interactive states */
+  --color-gold-light: #fef3c7;  /* Soft tinted gold background for highlighted containers */
+  
+  /* Typography & Interface Shades */
+  --color-text: #334155;        /* Soft off-black for comfortable prolonged reading */
+  --color-muted: #64748b;       /* Balanced gray for captions, footers, and notes */
+  --color-border: #e2e8f0;      /* Clean, thin subtle border line to replace harsh black lines */
+}
+
+/* Element selectors: these style every tag of that type */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--color-navy-dark);
+  line-height: 1.25;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  background-color: var(--color-navy);
+  color: #ffffff;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+}
+
+.tagline {
+  color: #c7d2de;
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--color-gold);
+  color: #ffffff;
+  outline: none;
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Class selector: used on every section. Shows the box model:
+   padding inside, margin outside, and a visible border. */
+.content-section {
+  background-color: var(--color-surface);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+/* Id selector: only the contact section gets this look */
+#contact {
+  background-color: var(--color-gold-light); /* Uses the updated soft warm gold tint */
+  border-color: var(--color-gold);
+}
+
+h2 {
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.4rem;
+  margin-top: 0;
+}
+
+/* ---------- Lists ---------- */
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Photo gallery ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery figure {
+  margin: 0;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery figcaption {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---------- Video and audio ---------- */
+video,
+audio {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem 0;
+}
+
+.media-note {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color-navy-dark);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+th {
+  background-color: var(--color-navy);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-bg);
+}
+
+/* ---------- Contact form ---------- */
+.form-row {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 420px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--color-navy-dark);
+}
+
+input,
+select,
+textarea {
+  padding: 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+button[type="submit"] {
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #92400e; /* Shifts smoothly to a deeper warm brown variant on hover */
+}
+
+button[type="submit"]:focus {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Narrow screens (phones) ---------- */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .content-section {
+    padding: 1rem;
+  }
+}

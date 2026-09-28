@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saviour Ntendekelo — Student Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>         
+
+    <header>
+        <h1>Saviour Ntendekelo</h1>
+        <p>Student ID: 202512536</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning-plan">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs (external)</a>
+    </nav>
+
+    <main>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+            I'm Saviour, a Computer Science student at Mulungushi University,
+             driven by a growing enthusiasm for emerging technology. Alongside my studies,
+              I serve as technical lead on a creative-industry digital platform I'm building from the scratch,
+               a project I'm keeping under wraps for now, but one that's pushing me deeper into web technologies. I'm especially drawn to AI and prompt engineering, and I enjoy digging into research on where these fields are heading. 
+                web technologies is assisting in sharpening the front-end skills I'll need to bring that mysterious project to life
+                <!-- paste your About Me paragraph from earlier here -->
+            </p>
+        </section>
+
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>I sing during my free time</li>
+                <li>I love acting in theaters</li>
+                <li>I am an enthusiaste of the emerging technology </li>
+                <li>enjoying diving deep into research criterias</li>
+            </ul>
+        </section>
+
+        <section id="learning-plan" class="content-section">
+            <h2>My Learning Plan</h2>
+            <ol>
+                <li>Practice semantic HTML structure daily.</li>
+                <li>Study CSS layout techniques like the box model and flexbox.</li>
+                <li>Learn basic JavaScript form validation.</li>
+            </ol>
+
+            <table>
+                <caption>Weekly Web Learning Plan</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML structure</td>
+                        <td>Rebuild a page using semantic tags</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS styling</td>
+                        <td>Style a section with the box model</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Forms &amp; accessibility</td>
+                        <td>Build a labeled contact form</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+            <figure>
+                <img src="images/photo1.jpg" alt="Describe photo 1 here">
+                <figcaption>Caption for photo 1</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo2.jpg" alt="Describe photo 2 here">
+                <figcaption>Caption for photo 2</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo3.jpg" alt="Describe photo 3 here">
+                <figcaption>Caption for photo 3</figcaption>
+            </figure>
+        </section>
+
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>Introduction Video</h3>
+            <video controls>
+                <!-- Matches "intro.mp" as seen in your file explorer -->
+                <source src="videos/intro.mp" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>A short video in which I introduce myself and the web skill I hope to learn.</p>
+            <p><strong>Written summary:</strong> Saviour Ntendekelo introduces himself as a second-year Computer Science student at Mulungushi University. He describes himself as an AI enthusiast interested in research, poetry and acting, and says he hopes to learn CSS layout this semester to build responsive websites.</p>
+
+            <h3>Audio Clip</h3>
+            <audio controls>
+                <!-- Routes inside the "Audio" folder to find your file -->
+                <source src="videos/Audio/voice.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <p>In this clip, I explain why I am studying web technologies. I link my interest in AI and research with the importance of presenting ideas clearly.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p><em>This form is a browser demonstration only — it does not send data anywhere.</em></p>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Saviour Ntendekelo. Built for ICT251 Web Technologies.</p>
+    </footer>
+
+</body>
+</html>

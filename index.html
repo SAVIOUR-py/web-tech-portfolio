@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="css/styles.css">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saviour Ntendekelo — Student Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Link the JavaScript script file at the bottom of head with defer per Part A -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>         
 
     <header>
+        <!-- Theme Switch Toggle Button placed inside the header for easy access -->
+        <button id="theme-toggle" class="theme-btn">Switch Theme</button>
         <h1>Saviour Ntendekelo</h1>
         <p>Student ID: 202512536</p>
     </header>
 
-    <nav>
+    <!-- Mobile Navigation Toggle Button -->
+    <button id="nav-toggle" class="nav-menu-btn" aria-label="Toggle Navigation">☰ Menu</button>
+
+    <nav id="main-nav">
         <a href="#about">About Me</a>
         <a href="#hobbies">My Hobbies</a>
         <a href="#learning-plan">My Learning Plan</a>
+        <a href="#skills-projects">Skills &amp; Projects</a>
         <a href="#photos">My Photos</a>
         <a href="#media">My Media</a>
         <a href="#contact">Contact</a>
-        <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs (external)</a>
+        <a href="https://mozilla.org" target="_blank">MDN Web Docs</a>
     </nav>
 
     <main>
+        <!-- Hero Introductory Area required by Part C -->
+        <section id="hero" class="content-section hero-area">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a second-year Computer Science student at Mulungushi University focused on frontend development and AI engineering research.</p>
+            <a href="#skills-projects" class="cta-button">View My Projects</a>
+        </section>
 
         <section id="about" class="content-section">
             <h2>About Me</h2>
             <p>
-            I'm Saviour, a Computer Science student at Mulungushi University,
-             driven by a growing enthusiasm for emerging technology. Alongside my studies,
-              I serve as technical lead on a creative-industry digital platform I'm building from the scratch,
-               a project I'm keeping under wraps for now, but one that's pushing me deeper into web technologies. I'm especially drawn to AI and prompt engineering, and I enjoy digging into research on where these fields are heading. 
-                web technologies is assisting in sharpening the front-end skills I'll need to bring that mysterious project to life
-                <!-- paste your About Me paragraph from earlier here -->
+                I'm Saviour, a Computer Science student at Mulungushi University, driven by a growing enthusiasm for emerging technology. Alongside my studies, I serve as technical lead on a creative-industry digital platform I'm building from scratch, a project I'm keeping under wraps for now, but one that's pushing me deeper into web technologies. I'm especially drawn to AI and prompt engineering, and I enjoy digging into research on where these fields are heading. Web technologies is assisting in sharpening the front-end skills I'll need to bring that mysterious project to life.
             </p>
         </section>
 
@@ -42,8 +51,8 @@
             <ul>
                 <li>I sing during my free time</li>
                 <li>I love acting in theaters</li>
-                <li>I am an enthusiaste of the emerging technology </li>
-                <li>enjoying diving deep into research criterias</li>
+                <li>I am an enthusiast of the emerging technology</li>
+                <li>Enjoying diving deep into research criteria</li>
             </ul>
         </section>
 
@@ -84,28 +93,57 @@
             </table>
         </section>
 
+        <!-- New Skills & Projects Section with Expandable Details required by Part B & D -->
+        <section id="skills-projects" class="content-section">
+            <h2>Skills &amp; Projects</h2>
+            <div class="project-item">
+                <h3>1. Creative Platform Framework</h3>
+                <p>A modern full-stack web application tailored for the creative arts industries.</p>
+                <button class="expand-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Built using modular front-end architecture. This application focuses on high accessibility performance, customized components, and lightweight state handling protocols.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>2. AI Prompt Optimization System</h3>
+                <p>Research project analyzing context constraints in LLMs.</p>
+                <button class="expand-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Designed testing sequences to systematically analyze behavioral variations across strict parsing guidelines, building structured datasets for deployment validation frameworks.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3>3. Semantic Web Portfolio</h3>
+                <p>An interactive student interface highlighting technical skills.</p>
+                <button class="expand-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <p>Strictly compliant with modern semantic rules. Employs external styles matching fluid design criteria across desktop grids and fluid smartphone screen structures.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="photos" class="content-section">
             <h2>My Photos</h2>
-            <figure>
-                <img src="images/photo1.jpg" alt="Describe photo 1 here">
-                <figcaption>Caption for photo 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/photo2.jpg" alt="Describe photo 2 here">
-                <figcaption>Caption for photo 2</figcaption>
-            </figure>
-            <figure>
-                <img src="images/photo3.jpg" alt="Describe photo 3 here">
-                <figcaption>Caption for photo 3</figcaption>
-            </figure>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="Saviour studying computer science layouts">
+                    <figcaption>Working on web code assignments</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Saviour attending a technical presentation">
+                    <figcaption>Exploring technology research tracks</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="Saviour collaborating on project layout options">
+                    <figcaption>Developing the backend design module</figcaption>
+                </figure>
+            </div>
         </section>
 
         <section id="media" class="content-section">
             <h2>My Media</h2>
-
             <h3>Introduction Video</h3>
             <video controls>
-                <!-- Matches "intro.mp" as seen in your file explorer -->
                 <source src="videos/intro.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -113,39 +151,46 @@
             <p><strong>Written summary:</strong> Saviour Ntendekelo introduces himself as a second-year Computer Science student at Mulungushi University. He describes himself as an AI enthusiast interested in research, poetry and acting, and says he hopes to learn CSS layout this semester to build responsive websites.</p>
 
             <h3>Audio Clip</h3>
-            <audio src="videos/audio.mp3"
-             controls
-             style="display:block; width:400px; height:50px;">
-             </audio>
-
-            <p>
-                In this clip, I explain why I am studying web technologies. I link my interest in AI and research with the importance of presenting ideas clearly.</p>
-        </p>
+            <audio controls>
+                <!-- Updated file structure location straight inside videos/ per Part A -->
+                <source src="videos/voice.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            <p>In this clip, I explain why I am studying web technologies. I link my interest in AI and research with the importance of presenting ideas clearly.</p>
+        </section>
 
         <section id="contact" class="content-section">
             <h2>Contact</h2>
-            <p><em>This form is a browser demonstration only — it does not send data anywhere.</em></p>
-            <form action="#">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <p><em>Browser demonstration only — no message is sent.</em></p>
+            <form id="portfolio-form" action="#" novalidate>
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="name-error" class="error-msg"></span>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-msg"></span>
+                </div>
 
-                <label for="topic">Topic:</label>
-                <input type="text" id="topic" name="topic">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <span id="message-error" class="error-msg"></span>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
-        </section>
 
+            <!-- Container where the JavaScript local preview will render live output per Part D -->
+            <div id="preview-container" class="hidden"></div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Saviour Ntendekelo. Built for ICT251 Web Technologies.</p>
+        <p>&copy; 2026 Saviour Ntendekelo. Built for ICT251 Web Technologies. | <a href="https://github.com" target="_blank" class="footer-link">View Source on GitHub</a></p>
     </footer>
 
 </body>
